@@ -42,6 +42,7 @@ jobs:
           pwd
           dir p4api
           copy-item -force ${{ github.workspace }}\openssl-libs\*  ${{ github.workspace }}\p4api\lib\
+          p4api.net\NuGet.exe restore p4api.net.sln
 
       - name: Get docker image
         run: docker pull $Env:docker
