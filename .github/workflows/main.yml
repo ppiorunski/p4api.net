@@ -35,7 +35,7 @@ jobs:
 
       - name: Get p4api and p4 binary
         run: |
-          $WebClient = New-Object System.Net.WebClient ; $WebClient.DownloadFile("ftp://ftp.perforce.com/perforce/$env:codeline/bin.ntx64/p4api_vs2017_dyn_openssl1.1.1.zip","p4api.zip")
+          $WebClient = New-Object System.Net.WebClient ; $WebClient.DownloadFile("ftp://ftp.perforce.com/perforce/$env:codeline/bin.ntx64/p4api_vs2017_static_vsdebug_openssl1.1.1.zip","p4api.zip")
           Expand-Archive -Path p4api.zip ;  Move-Item -path p4api\*\* p4api\
           $WebClient = New-Object System.Net.WebClient ; $WebClient.DownloadFile("ftp://ftp.perforce.com/perforce/$env:codeline/bin.ntx64/p4d.exe", "p4d.exe")
           dir
