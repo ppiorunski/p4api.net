@@ -49,4 +49,5 @@ jobs:
 
       - name: Run p4api.net unit tests
         run: |
+          $env:P4DPATH="${{ github.workspace }}"
           docker run -v ${{ github.workspace }}:c:\mount $Env:docker c:\test\test.net-unit.ps1
