@@ -4,7 +4,7 @@ name: CI
 
 env:
   codeline:       "r20.2"
-  docker:         "ppiorunski/p4api.net-unitest"
+  docker:         "ppiorunski/p4php7:p4api.net-unittest"
 
 # Controls when the action will run.
 on:
